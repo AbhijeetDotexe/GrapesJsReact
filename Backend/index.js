@@ -9,7 +9,7 @@ connection();
 
 // Enable CORS for requests from http://localhost:3000/
 app.use(cors({
-  origin: 'http://localhost:3001',
+  origin: 'http://localhost:3000',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,

@@ -12,7 +12,7 @@ export const getProject = async (req, res) => {
     const redisData = JSON.parse(await client.get(projectKey));
 
     if (redisData) {
-      console.log("Data retrieved from Redis");
+      console.log("Data retrieved from Redis", redisData);
       res.send(redisData);
     } else {
       const project = await Project.findOne({ uid: uid });
@@ -24,7 +24,7 @@ export const getProject = async (req, res) => {
         const projectData = project.data;
         console.log("Project data fetched");
         await client.set(projectKey, JSON.stringify(projectData));
-        client.expire(projectKey, 10);
+        client.expire(projectKey, 3600);
         res.send(projectData);
       }
     }

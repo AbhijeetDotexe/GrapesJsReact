@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import grapesjs from "grapesjs";
 import "grapesjs/dist/css/grapes.min.css";
-import "grapesjs-preset-webpage";
+import "grapesjs-preset-webpage"; 
+import './style.css'
 
 function WebBuilder() {
   useEffect(() => {
@@ -142,6 +143,7 @@ function WebBuilder() {
       category: 'Custom',
       content: `<div class="custom-block-2">Custom Content 2</div>`,
     });
+    
 
     // Cleanup on component unmount
     return () => {
