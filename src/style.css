@@ -1,8 +1,7 @@
 /* We can remove the border we've set at the beginning */
 
-.body{
-    color: black;
-}
+
+
 #gjs {
     border: none;
   }
